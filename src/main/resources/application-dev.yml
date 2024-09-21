@@ -1,0 +1,6 @@
+debug: true
+logging:
+  level:
+    top:
+      jingbh:
+        seatoccupation: TRACE

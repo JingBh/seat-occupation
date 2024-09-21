@@ -1,0 +1,32 @@
+spring:
+  datasource:
+    url: jdbc:h2:file:./data/database
+    username: sa
+    password:
+  jpa:
+    generate-ddl: false
+    properties:
+      hibernate:
+        globally_quoted_identifiers: true
+    open-in-view: true
+    hibernate:
+      ddl-auto: validate
+    database: h2
+  jmx:
+    enabled: false
+  flyway:
+    enabled: true
+    locations: "classpath:db/migration"
+    baseline-on-migrate: true
+  security:
+    oauth2:
+      client:
+        provider:
+          oidc:
+            issuer-uri: https://jingbh-access-bkqb2l.zitadel.cloud
+        registration:
+          oidc:
+            provider: oidc
+            client-id: 285467898686804039
+            client-secret:
+            scope: openid
