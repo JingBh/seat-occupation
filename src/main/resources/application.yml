@@ -30,3 +30,5 @@ spring:
             client-id: 285467898686804039
             client-secret:
             scope: openid
+server:
+  forward-headers-strategy: framework
